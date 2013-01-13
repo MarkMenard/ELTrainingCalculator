@@ -25,7 +25,11 @@
                                     <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Oo4-8q-i5R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-rH-FZW">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-rH-FZW">
+                                <color key="backgroundColor" red="0.88552989130434778" green="0.88552989130434778" blue="0.88552989130434778" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="UOF-cQ-Gms"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,10 +37,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DWc-rH-FZW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="T7p-JS-Q7y"/>
+                            <constraint firstItem="CGm-KE-fpN" firstAttribute="centerX" secondItem="DWc-rH-FZW" secondAttribute="centerX" type="default" id="7B3-Hr-FAg"/>
+                            <constraint firstItem="DWc-rH-FZW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Mm8-3z-6YP"/>
+                            <constraint firstItem="DWc-rH-FZW" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OuX-eI-tBN"/>
+                            <constraint firstAttribute="trailing" secondItem="DWc-rH-FZW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aN9-d9-Vsn"/>
                             <constraint firstItem="CGm-KE-fpN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="fKU-UC-ebC"/>
-                            <constraint firstItem="DWc-rH-FZW" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="fw2-9y-5gf"/>
-                            <constraint firstItem="DWc-rH-FZW" firstAttribute="centerX" secondItem="CGm-KE-fpN" secondAttribute="centerX" type="default" id="pcs-ei-ij1"/>
                         </constraints>
                     </view>
                     <connections>

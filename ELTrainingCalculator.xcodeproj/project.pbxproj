@@ -15,7 +15,6 @@
 		4DC5C03016A097D0008D91A1 /* ELTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5C02F16A097D0008D91A1 /* ELTAppDelegate.m */; };
 		4DC5C03216A097D0008D91A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC5C03116A097D0008D91A1 /* Default.png */; };
 		4DC5C03416A097D0008D91A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC5C03316A097D0008D91A1 /* Default@2x.png */; };
-		4DC5C03616A097D0008D91A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC5C03516A097D0008D91A1 /* Default-568h@2x.png */; };
 		4DC5C03916A097D0008D91A1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC5C03716A097D0008D91A1 /* MainStoryboard.storyboard */; };
 		4DC5C03C16A097D0008D91A1 /* ELTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5C03B16A097D0008D91A1 /* ELTViewController.m */; };
 		4DC5C04416A097D0008D91A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC5C04316A097D0008D91A1 /* SenTestingKit.framework */; };
@@ -50,7 +49,6 @@
 		4DC5C02F16A097D0008D91A1 /* ELTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELTAppDelegate.m; sourceTree = "<group>"; };
 		4DC5C03116A097D0008D91A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4DC5C03316A097D0008D91A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		4DC5C03516A097D0008D91A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4DC5C03816A097D0008D91A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4DC5C03A16A097D0008D91A1 /* ELTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELTViewController.h; sourceTree = "<group>"; };
 		4DC5C03B16A097D0008D91A1 /* ELTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELTViewController.m; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				4DC5C02D16A097D0008D91A1 /* ELTrainingCalculator-Prefix.pch */,
 				4DC5C03116A097D0008D91A1 /* Default.png */,
 				4DC5C03316A097D0008D91A1 /* Default@2x.png */,
-				4DC5C03516A097D0008D91A1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,7 +242,6 @@
 				4DC5C02A16A097D0008D91A1 /* InfoPlist.strings in Resources */,
 				4DC5C03216A097D0008D91A1 /* Default.png in Resources */,
 				4DC5C03416A097D0008D91A1 /* Default@2x.png in Resources */,
-				4DC5C03616A097D0008D91A1 /* Default-568h@2x.png in Resources */,
 				4DC5C03916A097D0008D91A1 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

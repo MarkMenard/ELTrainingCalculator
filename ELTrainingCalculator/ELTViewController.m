@@ -85,6 +85,7 @@
 
 - (IBAction)clearPressed {
     [self.brain clear];
+    self.display.text = @"0";
     NSLog(@"current arguments: %@", [self.brain currentArguments]);
 }
 

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ELTViewController : UIViewController
+@interface ELTViewController : UIViewController {
+    BOOL userEnteringArgument;
+}
 
 @end

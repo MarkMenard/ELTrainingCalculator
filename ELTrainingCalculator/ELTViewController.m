@@ -16,8 +16,19 @@
 
 @implementation ELTViewController
 
+- (IBAction)sevenPressed:(id)sender {
+    [self appendInputToDisplay:@"7"];
+    NSLog(@"Seven button pressed.");
+}
 
-
+-(void) appendInputToDisplay:(NSString *)input {
+    if (userEnteringArgument) {
+        self.display.text = [self.display.text stringByAppendingString:input];
+    } else {
+        userEnteringArgument = YES;
+        self.display.text = input;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

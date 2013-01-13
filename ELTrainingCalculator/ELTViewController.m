@@ -47,6 +47,10 @@
     NSLog(@"add pressed");
 }
 
+- (IBAction)enterPressed:(id)sender {
+    NSLog(@"enter pressed");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.brain = [[ELTCalculatorBrain alloc] init];

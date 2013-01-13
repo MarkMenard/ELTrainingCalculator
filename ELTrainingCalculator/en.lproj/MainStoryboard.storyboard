@@ -240,6 +240,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterPressed:" destination="2" eventType="touchUpInside" id="NQm-ef-8H6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -306,6 +309,7 @@
             <relationships>
                 <relationship kind="action" name="addPressed:"/>
                 <relationship kind="action" name="dividePressed:"/>
+                <relationship kind="action" name="enterPressed:"/>
                 <relationship kind="action" name="multiplyPressed:"/>
                 <relationship kind="action" name="numberButtonPressed:"/>
                 <relationship kind="action" name="subtractPressed:"/>

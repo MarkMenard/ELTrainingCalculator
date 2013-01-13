@@ -32,12 +32,11 @@
 }
 
 - (IBAction)addPressed:(id)sender {
-    double result = [self.brain add];
-    self.display.text = [NSString stringWithFormat:@"%f", result];
+    [self displayResult:[self.brain add]];
 }
 
 - (IBAction)subtractPressed:(id)sender {
-    NSLog(@"subtract pressed");
+    [self displayResult:[self.brain subtract]];
 }
 
 - (IBAction)multiplyPressed:(id)sender {
@@ -46,6 +45,10 @@
 
 - (IBAction)dividePressed:(id)sender {
     NSLog(@"divide pressed");
+}
+
+- (void) displayResult:(double)result {
+    self.display.text = [NSString stringWithFormat:@"%f", result];
 }
 
 - (IBAction)enterPressed:(id)sender {

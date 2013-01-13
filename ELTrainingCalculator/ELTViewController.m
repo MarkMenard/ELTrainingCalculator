@@ -48,7 +48,10 @@
 }
 
 - (IBAction)enterPressed:(id)sender {
-    NSLog(@"enter pressed");
+    NSLog(@"enter pressed pushing %@ onto the argument stack.", self.display.text);
+    [self.brain pushArgument:[self.display.text doubleValue]];
+    userEnteringArgument = NO;
+    self.display.text = @"0";
 }
 
 - (void)viewDidLoad {

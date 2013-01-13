@@ -18,6 +18,7 @@
 
 - (IBAction)buttonPressed:(id)sender {
     NSLog(@"Button Pressed");
+    self.display.text = @"Hello World";
 }
 
 - (void)viewDidLoad

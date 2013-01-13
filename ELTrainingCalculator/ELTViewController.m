@@ -50,10 +50,12 @@
 - (void)performOperation:(SEL)selector {
     [self assureEnterPressed];
     [self displayResult:[self performBrainOperation:selector]];
+    NSLog(@"current arguments: %@", [self.brain currentArguments]);
 }
 
 -(double)performBrainOperation:(SEL)selector {
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[self.brain class] instanceMethodSignatureForSelector:selector]];
+    NSMethodSignature *methodSignature = [[self.brain class] instanceMethodSignatureForSelector:selector];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
     [invocation setSelector:selector];
     [invocation setTarget:self.brain];
     [invocation invoke];
@@ -76,6 +78,7 @@
 - (IBAction)enterPressed:(id)sender {
     NSLog(@"enter pressed pushing %@ onto the argument stack.", self.display.text);
     [self.brain pushArgument:[self.display.text doubleValue]];
+    NSLog(@"current arguments: %@", [self.brain currentArguments]);
     userEnteringArgument = NO;
     self.display.text = @"0";
 }

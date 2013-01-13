@@ -83,6 +83,11 @@
     self.display.text = @"0";
 }
 
+- (IBAction)clearPressed {
+    [self.brain clear];
+    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.brain = [[ELTCalculatorBrain alloc] init];

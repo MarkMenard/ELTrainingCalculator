@@ -32,23 +32,45 @@
 }
 
 - (IBAction)addPressed:(id)sender {
-    [self displayResult:[self.brain add]];
+    [self performOperation:@selector(add)];
 }
 
 - (IBAction)subtractPressed:(id)sender {
-    [self displayResult:[self.brain subtract]];
+    [self performOperation:@selector(subtract)];
 }
 
 - (IBAction)multiplyPressed:(id)sender {
-    [self displayResult:[self.brain multiply]];
+    [self performOperation:@selector(multiply)];
 }
 
 - (IBAction)dividePressed:(id)sender {
-    [self displayResult:[self.brain divide]];
+    [self performOperation:@selector(divide)];
+}
+
+- (void)performOperation:(SEL)selector {
+    [self assureEnterPressed];
+    [self displayResult:[self performBrainOperation:selector]];
+}
+
+-(double)performBrainOperation:(SEL)selector {
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[self.brain class] instanceMethodSignatureForSelector:selector]];
+    [invocation setSelector:selector];
+    [invocation setTarget:self.brain];
+    [invocation invoke];
+    double returnValue;
+    [invocation getReturnValue:&returnValue];
+    NSLog(@"Returned %f", returnValue);
+    return returnValue;
 }
 
 - (void) displayResult:(double)result {
     self.display.text = [NSString stringWithFormat:@"%f", result];
+}
+
+- (void) assureEnterPressed {
+    if (userEnteringArgument) {
+        [self enterPressed:nil];
+    }
 }
 
 - (IBAction)enterPressed:(id)sender {

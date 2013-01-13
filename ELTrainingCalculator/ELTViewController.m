@@ -40,11 +40,11 @@
 }
 
 - (IBAction)multiplyPressed:(id)sender {
-    NSLog(@"multiply pressed");
+    [self displayResult:[self.brain multiply]];
 }
 
 - (IBAction)dividePressed:(id)sender {
-    NSLog(@"divide pressed");
+    [self displayResult:[self.brain divide]];
 }
 
 - (void) displayResult:(double)result {

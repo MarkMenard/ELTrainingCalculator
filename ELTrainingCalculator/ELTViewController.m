@@ -29,6 +29,22 @@
     }
 }
 
+- (IBAction)dividePressed:(id)sender {
+    NSLog(@"divide pressed");
+}
+
+- (IBAction)multiplyPressed:(id)sender {
+    NSLog(@"multiply pressed");
+}
+
+- (IBAction)subtractPressed:(id)sender {
+    NSLog(@"subtract pressed");
+}
+
+- (IBAction)addPressed:(id)sender {
+    NSLog(@"add pressed");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

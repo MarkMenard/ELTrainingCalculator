@@ -392,6 +392,7 @@
 				GCC_PREFIX_HEADER = "ELTrainingCalculator/ELTrainingCalculator-Prefix.pch";
 				INFOPLIST_FILE = "ELTrainingCalculator/ELTrainingCalculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,6 +404,7 @@
 				GCC_PREFIX_HEADER = "ELTrainingCalculator/ELTrainingCalculator-Prefix.pch";
 				INFOPLIST_FILE = "ELTrainingCalculator/ELTrainingCalculator-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +462,7 @@
 				4DC5C05616A097D0008D91A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DC5C05716A097D0008D91A1 /* Build configuration list for PBXNativeTarget "ELTrainingCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +471,7 @@
 				4DC5C05916A097D0008D91A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

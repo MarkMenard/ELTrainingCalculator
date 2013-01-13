@@ -7,10 +7,12 @@
 //
 
 #import "ELTViewController.h"
+#import "ELTCalculatorBrain.h"
 
 @interface ELTViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (strong, nonatomic) ELTCalculatorBrain *brain;
 
 @end
 
@@ -47,7 +49,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.brain = [[ELTCalculatorBrain alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,6 +10,8 @@
 
 @interface ELTViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
+
 @end
 
 @implementation ELTViewController

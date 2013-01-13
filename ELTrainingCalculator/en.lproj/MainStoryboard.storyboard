@@ -25,13 +25,23 @@
                                     <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Oo4-8q-i5R"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-rH-FZW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CGm-KE-fpN" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="6Ho-Cf-1VD"/>
+                            <constraint firstItem="DWc-rH-FZW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="91" id="T7p-JS-Q7y"/>
                             <constraint firstItem="CGm-KE-fpN" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="fKU-UC-ebC"/>
+                            <constraint firstItem="DWc-rH-FZW" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="fw2-9y-5gf"/>
+                            <constraint firstItem="DWc-rH-FZW" firstAttribute="centerX" secondItem="CGm-KE-fpN" secondAttribute="centerX" type="default" id="pcs-ei-ij1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="display" destination="DWc-rH-FZW" id="lJP-u0-MKR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +52,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ELTViewController.h"/>
             <relationships>
                 <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

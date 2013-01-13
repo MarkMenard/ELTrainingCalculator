@@ -14,6 +14,10 @@
 
 @implementation ELTViewController
 
+- (IBAction)buttonPressed:(id)sender {
+    NSLog(@"Button Pressed");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

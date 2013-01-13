@@ -55,5 +55,12 @@
     STAssertEquals([brain divide], 3.0, @"6.0 / 2.0 should equal 3.0");
 }
 
+-(void) testClear {
+    [brain pushArgument:6.0];
+    [brain pushArgument:2.0];
+    [brain clear];
+    STAssertTrue([[brain currentArguments] count] == 0, @"After a clear there should be no arguments on the stack.");
+}
+
 
 @end

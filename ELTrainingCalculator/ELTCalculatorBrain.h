@@ -13,6 +13,7 @@
 -(void) pushArgument:(double)argument;
 -(double) popArgument;
 -(NSMutableArray *) currentArguments;
+-(void) clear;
 
 -(double) add;
 -(double) subtract;

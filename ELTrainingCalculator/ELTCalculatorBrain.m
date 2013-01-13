@@ -40,6 +40,10 @@
     return [self.argumentStack copy];
 }
 
+-(void) clear {
+    self.argumentStack = [NSMutableArray new];
+}
+
 -(double) add {
     return [self doAction:^double(double argument1, double argument2) {
         return argument1 + argument2;

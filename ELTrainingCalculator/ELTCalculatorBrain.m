@@ -8,6 +8,12 @@
 
 #import "ELTCalculatorBrain.h"
 
+@interface ELTCalculatorBrain()
+
+@property (strong, nonatomic) NSMutableArray *argumentStack;
+
+@end
+
 @implementation ELTCalculatorBrain
 
 -(id) init {
@@ -28,6 +34,10 @@
         [self.argumentStack removeLastObject];
     }
     return [argument doubleValue];
+}
+
+-(NSMutableArray *)currentArguments {
+    return [self.argumentStack copy];
 }
 
 -(double) add {

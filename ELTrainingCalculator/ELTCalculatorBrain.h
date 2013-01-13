@@ -10,10 +10,9 @@
 
 @interface ELTCalculatorBrain : NSObject
 
-@property (strong, nonatomic) NSMutableArray *argumentStack;
-
 -(void) pushArgument:(double)argument;
 -(double) popArgument;
+-(NSMutableArray *) currentArguments;
 
 -(double) add;
 -(double) subtract;

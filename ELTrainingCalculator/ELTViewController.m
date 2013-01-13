@@ -80,7 +80,7 @@
     [self.brain pushArgument:[self.display.text doubleValue]];
     NSLog(@"current arguments: %@", [self.brain currentArguments]);
     userEnteringArgument = NO;
-    self.display.text = @"0";
+//    self.display.text = @"0";
 }
 
 - (IBAction)clearPressed {

@@ -31,20 +31,21 @@
     }
 }
 
-- (IBAction)dividePressed:(id)sender {
-    NSLog(@"divide pressed");
-}
-
-- (IBAction)multiplyPressed:(id)sender {
-    NSLog(@"multiply pressed");
+- (IBAction)addPressed:(id)sender {
+    double result = [self.brain add];
+    self.display.text = [NSString stringWithFormat:@"%f", result];
 }
 
 - (IBAction)subtractPressed:(id)sender {
     NSLog(@"subtract pressed");
 }
 
-- (IBAction)addPressed:(id)sender {
-    NSLog(@"add pressed");
+- (IBAction)multiplyPressed:(id)sender {
+    NSLog(@"multiply pressed");
+}
+
+- (IBAction)dividePressed:(id)sender {
+    NSLog(@"divide pressed");
 }
 
 - (IBAction)enterPressed:(id)sender {

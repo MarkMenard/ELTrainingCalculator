@@ -12,6 +12,7 @@
 @interface ELTViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (weak, nonatomic) IBOutlet UILabel *argumentDisplay;
 @property (strong, nonatomic) ELTCalculatorBrain *brain;
 
 @end
@@ -50,7 +51,7 @@
 - (void)performOperation:(SEL)selector {
     [self assureEnterPressed];
     [self displayResult:[self performBrainOperation:selector]];
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self updateArgumentDisplay];
 }
 
 -(double)performBrainOperation:(SEL)selector {
@@ -71,22 +72,26 @@
 
 - (void) assureEnterPressed {
     if (userEnteringArgument) {
-        [self enterPressed:nil];
+        [self enterPressed];
     }
 }
-
-- (IBAction)enterPressed:(id)sender {
+- (IBAction)enterPressed {
     NSLog(@"enter pressed pushing %@ onto the argument stack.", self.display.text);
     [self.brain pushArgument:[self.display.text doubleValue]];
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self updateArgumentDisplay];
     userEnteringArgument = NO;
-//    self.display.text = @"0";
 }
 
 - (IBAction)clearPressed {
-    [self.brain clear];
     self.display.text = @"0";
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self.brain clear];
+    [self updateArgumentDisplay];
+}
+
+- (void) updateArgumentDisplay {
+    NSMutableArray *arguments = [self.brain currentArguments];
+    NSString *argumentList = [arguments componentsJoinedByString:@", "];
+    self.argumentDisplay.text = argumentList;
 }
 
 - (void)viewDidLoad {

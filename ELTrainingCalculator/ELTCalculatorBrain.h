@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum
+{
+  unknownMode   = -99,
+  addMode       = 100,
+  subtractMode  = 101,
+  multiplyMode  = 102,
+  divideMode    = 103
+} CalcMode;
+
 @interface ELTCalculatorBrain : NSObject
 
 -(void) pushArgument:(double)argument;
@@ -15,9 +24,10 @@
 -(NSMutableArray *) currentArguments;
 -(void) clear;
 
--(double) add;
--(double) subtract;
--(double) multiply;
--(double) divide;
+//-(double) add;
+//-(double) subtract;
+//-(double) multiply;
+//-(double) divide;
 
+- (double)performCalcWithMode:(CalcMode)calcMode;
 @end

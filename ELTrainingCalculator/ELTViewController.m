@@ -11,7 +11,6 @@
 
 @interface ELTViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *display;
 @property (strong, nonatomic) ELTCalculatorBrain *brain;
 
 @end
@@ -30,7 +29,7 @@
         self.display.text = input;
     }
 }
-
+/*
 - (IBAction)addPressed:(id)sender {
     [self performOperation:@selector(add)];
 }
@@ -50,7 +49,7 @@
 - (void)performOperation:(SEL)selector {
     [self assureEnterPressed];
     [self displayResult:[self performBrainOperation:selector]];
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self updateArgumentDisplay];
 }
 
 -(double)performBrainOperation:(SEL)selector {
@@ -64,6 +63,7 @@
     NSLog(@"Returned %f", returnValue);
     return returnValue;
 }
+*/
 
 - (void) displayResult:(double)result {
     self.display.text = [NSString stringWithFormat:@"%f", result];
@@ -71,22 +71,27 @@
 
 - (void) assureEnterPressed {
     if (userEnteringArgument) {
-        [self enterPressed:nil];
+        [self enterPressed];
     }
 }
 
-- (IBAction)enterPressed:(id)sender {
+- (IBAction)enterPressed {
     NSLog(@"enter pressed pushing %@ onto the argument stack.", self.display.text);
     [self.brain pushArgument:[self.display.text doubleValue]];
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self updateArgumentDisplay];
     userEnteringArgument = NO;
-//    self.display.text = @"0";
 }
 
 - (IBAction)clearPressed {
-    [self.brain clear];
     self.display.text = @"0";
-    NSLog(@"current arguments: %@", [self.brain currentArguments]);
+    [self.brain clear];
+    [self updateArgumentDisplay];
+}
+
+- (void) updateArgumentDisplay {
+    NSArray *arguments = [self.brain currentArguments];
+    NSString *argumentList = [arguments componentsJoinedByString:@", "];
+    self.argumentDisplay.text = argumentList;
 }
 
 - (void)viewDidLoad {
@@ -97,6 +102,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)functionButtonPressed:(id)sender {
+  
+  UIButton *buttonPressed = (UIButton *)sender;
+  
+  int tag = buttonPressed.tag;
+  
+  NSLog(@"Function button pressed: %i", tag);
+  
+  [self assureEnterPressed];
+  double result = [self.brain performCalcWithMode:tag];
+  [self displayResult:result];
+  [self updateArgumentDisplay];
 }
 
 @end

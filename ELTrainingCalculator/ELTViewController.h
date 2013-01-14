@@ -12,4 +12,14 @@
     BOOL userEnteringArgument;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *display;
+@property (weak, nonatomic) IBOutlet UILabel *argumentDisplay;
+
+
+- (IBAction)numberButtonPressed:(id)sender;
+- (IBAction)enterPressed;
+- (IBAction)clearPressed;
+
+- (IBAction)functionButtonPressed:(id)sender;
+
 @end

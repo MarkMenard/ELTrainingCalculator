@@ -279,6 +279,19 @@
             <point key="canvasLocation" x="190" y="70"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ELTViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ELTViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPressed:"/>
+                <relationship kind="action" name="dividePressed:"/>
+                <relationship kind="action" name="numberButtonPressed:"/>
+                <relationship kind="action" name="subtractPressed:"/>
+                <relationship kind="outlet" name="argumentDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

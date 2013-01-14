@@ -20,8 +20,8 @@
 }
 
 -(void) testPushPopArgument {
-    [brain pushArgument:1.0];
-    STAssertEquals([brain popArgument], 1.0, @"Wrong argument returned.");
+    [brain pushArgument:1.1];
+    STAssertEquals([brain popArgument], 1.1, @"Wrong argument returned.");
 }
 
 -(void) testResultPusheOntoArgumentStack {
@@ -32,9 +32,9 @@
 }
 
 -(void) testAddition {
-    [brain pushArgument:1.0];
+    [brain pushArgument:1.1];
     [brain pushArgument:2.0];
-    STAssertEquals([brain add], 3.0, @"1.0 + 2.0 should equal 3.0");
+    STAssertEquals([brain add], 3.1, @"1.1 + 2.0 should equal 3.1");
 }
 
 -(void) testSubtraction {
